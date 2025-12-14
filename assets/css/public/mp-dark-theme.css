@@ -74,29 +74,46 @@
 }
 
 /* ===== PIX Checkout Container ===== */
-.mp-checkout-pix-container {
+.mp-checkout-pix-container,
+div.mp-checkout-pix-container,
+.woocommerce .mp-checkout-pix-container,
+.woocommerce-checkout .mp-checkout-pix-container {
     background-color: var(--mp-dark-bg-secondary) !important;
     border-radius: 8px !important;
 }
 
 /* ===== PIX Template ===== */
-.mp-pix-template-container {
+.mp-pix-template-container,
+div.mp-pix-template-container,
+.woocommerce .mp-pix-template-container,
+.mp-checkout-container .mp-pix-template-container {
     background-color: var(--mp-dark-bg-secondary) !important;
     border-radius: 8px !important;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
 .mp-pix-template-title,
-.mp-pix-template-subtitle {
+.mp-pix-template-subtitle,
+.mp-pix-template-container .mp-pix-template-title,
+.mp-pix-template-container .mp-pix-template-subtitle {
     color: var(--mp-dark-text-primary) !important;
 }
 
 /* ===== PIX Order Received / Thank You Page ===== */
-.mp-details-pix {
+.mp-details-pix,
+div.mp-details-pix,
+.woocommerce .mp-details-pix,
+.woocommerce-order-received .mp-details-pix {
     background-color: var(--mp-dark-bg-secondary) !important;
     box-shadow: var(--mp-dark-card-shadow) !important;
 }
 
-.mp-details-title {
+.mp-details-title,
+p.mp-details-title {
     color: var(--mp-dark-text-primary) !important;
 }
 
@@ -105,42 +122,98 @@
 .mp-details-pix-description,
 .mp-details-pix-qr-title,
 .mp-details-pix-qr-description,
-.mp-details-pix-amount {
+.mp-details-pix-amount,
+p.mp-details-pix-title,
+p.mp-details-list-description,
+p.mp-details-pix-description,
+p.mp-details-pix-qr-title,
+p.mp-details-pix-qr-description,
+p.mp-details-pix-amount {
     color: var(--mp-dark-text-primary) !important;
 }
 
-.mp-details-pix-qr-subtitle {
+.mp-details-pix-qr-subtitle,
+p.mp-details-pix-qr-subtitle {
     color: var(--mp-dark-text-muted) !important;
 }
 
-.mp-details-pix-number-p {
+.mp-details-pix-number-p,
+p.mp-details-pix-number-p {
     border-color: var(--mp-dark-accent-color) !important;
     color: var(--mp-dark-accent-color) !important;
     background: transparent !important;
 }
 
-.mp-pix-right {
+.mp-pix-right,
+div.mp-pix-right {
     border-left-color: var(--mp-dark-border-color) !important;
 }
 
-.mp-qr-input {
+/* ===== PIX Thank You Page - Additional Selectors ===== */
+.mp-row-checkout-pix,
+.mp-row-checkout-pix-container,
+div.mp-row-checkout-pix,
+div.mp-row-checkout-pix-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-text-center,
+div.mp-text-center {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-steps-congrats,
+ul.mp-steps-congrats {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-col-md-4,
+div.mp-col-md-4 {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-col-md-8,
+div.mp-col-md-8 {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-pix-left,
+ul.mp-pix-left {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-details-pix-container,
+div.mp-details-pix-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-details-list,
+li.mp-details-list {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-qr-input,
+input.mp-qr-input {
     background-color: var(--mp-dark-input-bg) !important;
     color: var(--mp-dark-text-primary) !important;
     border-color: var(--mp-dark-border-color) !important;
 }
 
-.mp-details-pix-button {
+.mp-details-pix-button,
+button.mp-details-pix-button {
     background-color: var(--mp-dark-accent-color) !important;
     color: #ffffff !important;
     border: none !important;
 }
 
-.mp-details-pix-button:hover {
+.mp-details-pix-button:hover,
+button.mp-details-pix-button:hover {
     background-color: var(--mp-dark-accent-hover) !important;
 }
 
 /* Make QR code visible on dark background */
-.mp-details-pix-qr-img {
+.mp-details-pix-qr-img,
+img.mp-details-pix-qr-img {
     background-color: #ffffff !important;
     padding: 10px !important;
     border-radius: 8px !important;
@@ -148,13 +221,23 @@
 
 /* ===== PIX Approved Page ===== */
 .mp-pix-approved-container,
-.mp-pix-image-container {
+.mp-pix-image-container,
+div.mp-pix-approved-container,
+div.mp-pix-image-container {
     background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== PIX Image Display ===== */
+.mp-details-pix-img,
+img.mp-details-pix-img {
+    /* Keep the image visible */
 }
 
 /* ===== Credits Checkout ===== */
 .mp-checkout-credits-container,
-.mp-checkout-credits-content {
+.mp-checkout-credits-content,
+div.mp-checkout-credits-container,
+div.mp-checkout-credits-content {
     background-color: var(--mp-dark-bg-secondary) !important;
     border-radius: 8px !important;
 }
@@ -178,8 +261,14 @@
     color: var(--mp-dark-text-muted) !important;
 }
 
+.mp-credits-checkout-benefits,
+div.mp-credits-checkout-benefits {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
 /* ===== Checkout Redirect V3 ===== */
-.mp-checkout-redirect-v3-container {
+.mp-checkout-redirect-v3-container,
+div.mp-checkout-redirect-v3-container {
     background-color: var(--mp-dark-bg-tertiary) !important;
 }
 
@@ -190,7 +279,8 @@
 }
 
 /* ===== Custom Checkout (Credit Card) ===== */
-.mp-checkout-custom-container {
+.mp-checkout-custom-container,
+div.mp-checkout-custom-container {
     background-color: var(--mp-dark-bg-secondary) !important;
     border-radius: 8px !important;
 }
@@ -210,14 +300,26 @@
     border-color: var(--mp-dark-border-color) !important;
 }
 
+.mp-checkout-custom-card-form,
+.mp-checkout-custom-card-row,
+.mp-checkout-custom-card-column {
+    background-color: transparent !important;
+}
+
 /* Wallet Button */
-.mp-wallet-button-container {
+.mp-wallet-button-container,
+div.mp-wallet-button-container {
     border-color: var(--mp-dark-border-color) !important;
     background-color: var(--mp-dark-bg-secondary) !important;
 }
 
 .mp-wallet-button-container .mp-wallet-button-title span {
     color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-wallet-button-container-wrapper,
+div.mp-wallet-button-container-wrapper {
+    background-color: transparent !important;
 }
 
 /* Security Code Tooltip */
@@ -254,7 +356,8 @@
 }
 
 /* ===== Test Mode Card ===== */
-.mp-test-mode-card {
+.mp-test-mode-card,
+div.mp-test-mode-card {
     background: var(--mp-dark-bg-tertiary) !important;
 }
 
@@ -266,17 +369,34 @@
     color: var(--mp-dark-text-secondary) !important;
 }
 
+.mp-test-mode-container,
+div.mp-test-mode-container {
+    background-color: transparent !important;
+}
+
 /* ===== Terms and Conditions ===== */
-.mp-terms-and-conditions-text {
+.mp-terms-and-conditions-text,
+span.mp-terms-and-conditions-text,
+.mp-checkout-container .mp-terms-and-conditions-text {
     color: var(--mp-dark-text-muted) !important;
 }
 
-.mp-terms-and-conditions-link {
+.mp-terms-and-conditions-link,
+a.mp-terms-and-conditions-link,
+.mp-checkout-container .mp-terms-and-conditions-link {
     color: var(--mp-dark-accent-color) !important;
 }
 
-.mp-terms-and-conditions-link:hover {
+.mp-terms-and-conditions-link:hover,
+a.mp-terms-and-conditions-link:hover {
     color: var(--mp-dark-accent-hover) !important;
+}
+
+.mp-checkout-pix-terms-and-conditions,
+.mp-checkout-credits-terms-and-conditions,
+div.mp-checkout-pix-terms-and-conditions,
+div.mp-checkout-credits-terms-and-conditions {
+    background-color: transparent !important;
 }
 
 /* ===== Privacy Policy ===== */
@@ -289,7 +409,8 @@
 }
 
 /* ===== Checkout Benefits ===== */
-.mp-checkout-benefits-item {
+.mp-checkout-benefits-item,
+li.mp-checkout-benefits-item {
     color: var(--mp-dark-text-secondary) !important;
 }
 
@@ -300,6 +421,13 @@
 .mp-checkout-benefits-tick-mark::before,
 .mp-checkout-benefits-tick-mark::after {
     background-color: var(--mp-dark-accent-color) !important;
+}
+
+.mp-checkout-benefits-container,
+.mp-checkout-benefits-container-list,
+div.mp-checkout-benefits-container,
+ul.mp-checkout-benefits-container-list {
+    background-color: transparent !important;
 }
 
 /* ===== Alert Messages ===== */
@@ -314,7 +442,8 @@
 
 /* ===== Input Labels ===== */
 .mp-input-label,
-.mp-checkout-container label {
+.mp-checkout-container label,
+label.mp-input-label {
     color: var(--mp-dark-text-primary) !important;
 }
 
@@ -329,13 +458,16 @@
 
 /* ===== Dropdown/Select Styles ===== */
 .mp-andes-dropdown,
-.mp-input-select {
+.mp-input-select,
+select.mp-andes-dropdown,
+select.mp-input-select {
     background: var(--mp-dark-input-bg) !important;
     color: var(--mp-dark-text-primary) !important;
     border-color: var(--mp-dark-border-color) !important;
 }
 
-.mp-andes-dropdown option {
+.mp-andes-dropdown option,
+.mp-input-select option {
     background: var(--mp-dark-bg-secondary) !important;
     color: var(--mp-dark-text-primary) !important;
 }
@@ -352,28 +484,34 @@
 }
 
 /* ===== Ticket Checkout ===== */
-.mp-checkout-ticket-container {
+.mp-checkout-ticket-container,
+div.mp-checkout-ticket-container {
     background-color: var(--mp-dark-bg-secondary) !important;
 }
 
 /* ===== PSE Checkout ===== */
-.mp-checkout-pse-container {
+.mp-checkout-pse-container,
+div.mp-checkout-pse-container {
     background-color: var(--mp-dark-bg-secondary) !important;
 }
 
 /* ===== Yape Checkout ===== */
-.mp-checkout-yape-container {
+.mp-checkout-yape-container,
+div.mp-checkout-yape-container {
     background-color: var(--mp-dark-bg-secondary) !important;
 }
 
 /* ===== Basic (Pro) Checkout ===== */
-.mp-checkout-basic-container {
+.mp-checkout-basic-container,
+div.mp-checkout-basic-container {
     background-color: var(--mp-dark-bg-secondary) !important;
 }
 
 /* ===== Checkout Redirect ===== */
 .mp-checkout-redirect-container,
-.mp-checkout-redirect-v2-container {
+.mp-checkout-redirect-v2-container,
+div.mp-checkout-redirect-container,
+div.mp-checkout-redirect-v2-container {
     background-color: var(--mp-dark-bg-tertiary) !important;
 }
 
@@ -401,20 +539,31 @@
 
 /* ===== Mobile Responsive Adjustments ===== */
 @media (max-width: 767.98px) {
-    .mp-pix-right {
+    .mp-pix-right,
+    div.mp-pix-right {
         border-top-color: var(--mp-dark-border-color) !important;
         border-left: none !important;
     }
     
-    .mp-details-pix-button {
+    .mp-details-pix-button,
+    button.mp-details-pix-button {
         background-color: var(--mp-dark-accent-color) !important;
+    }
+    
+    .mp-col-md-4,
+    .mp-col-md-8,
+    div.mp-col-md-4,
+    div.mp-col-md-8 {
+        background-color: var(--mp-dark-bg-secondary) !important;
     }
 }
 
 /* ===== WooCommerce Integration ===== */
 .woocommerce-checkout .mp-checkout-container,
 .woocommerce-order-received .mp-details-pix,
-.woocommerce .mp-checkout-container {
+.woocommerce .mp-checkout-container,
+body.woocommerce-checkout .mp-checkout-container,
+body.woocommerce-order-received .mp-details-pix {
     background-color: var(--mp-dark-bg-secondary) !important;
     border-radius: 8px !important;
 }
@@ -497,4 +646,33 @@
 .mp-checkout-container ::selection {
     background-color: var(--mp-dark-accent-color);
     color: #ffffff;
+}
+
+/* ===== PIX Value/Amount Display ===== */
+.mp-details-pix-qr,
+.mp-details-pix-qr-value,
+span.mp-details-pix-qr,
+span.mp-details-pix-qr-value {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Additional WooCommerce Block Checkout Support ===== */
+.wc-block-components-radio-control-accordion-content .mp-checkout-container,
+.wc-block-components-radio-control-accordion-content .mp-pix-template-container,
+.wc-block-components-radio-control-accordion-content .mp-checkout-pix-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Ensure all child elements inherit dark theme ===== */
+.mp-details-pix *,
+.mp-checkout-container *,
+.mp-pix-template-container * {
+    color: inherit;
+}
+
+/* ===== Override any inline styles with higher specificity ===== */
+[class*="mp-checkout"][style*="background"],
+[class*="mp-pix"][style*="background"],
+[class*="mp-details"][style*="background"] {
+    background-color: var(--mp-dark-bg-secondary) !important;
 }
