@@ -50,6 +50,19 @@ class OrderStatus
     }
 
     /**
+     * Filter to return 'processing' status for payment complete
+     *
+     * @param string $status Order status
+     * @param int $order_id Order ID
+     * @param WC_Order $order Order object
+     * @return string
+     */
+    public function mercado_pago_payment_complete_order_status($status, $order_id, $order): string
+    {
+        return 'processing';
+    }
+
+    /**
      * Set order status from/to
      *
      * @param WC_Order $order
@@ -144,18 +157,15 @@ class OrderStatus
             $order->add_order_note('Mercado Pago: ' . $this->translations['payment_approved']);
             $order->add_order_note('Mercado Pago: ' . $this->translations['payment_approved'], 1);
 
-            $payment_completed_status = apply_filters(
-                'woocommerce_payment_complete_order_status',
-                $order->needs_processing() ? 'processing' : 'completed',
-                $order->get_id(),
-                $order
-            );
-
             if (method_exists($order, 'get_status') && $order->get_status() !== 'completed') {
+                // Add filter to change the default status from 'completed' to 'processing'
+                add_filter('woocommerce_payment_complete_order_status', array($this, 'mercado_pago_payment_complete_order_status'), 10, 3);
+                
+                // Complete order payment
                 $order->payment_complete();
-                if ($payment_completed_status !== 'completed') {
-                    $order->update_status(self::mapMpStatusToWoocommerceStatus('approved'));
-                }
+                
+                // Remove filter after use
+                remove_filter('woocommerce_payment_complete_order_status', array($this, 'mercado_pago_payment_complete_order_status'), 10);
             }
         }
     }
