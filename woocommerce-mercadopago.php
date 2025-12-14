@@ -15,7 +15,7 @@
  * Requires Plugins: woocommerce
  * GitHub Plugin URI: matheustx017/cart-woocommerce
  * Primary Branch: main
- *
+ * teste
  * @package MercadoPago
  */
 
