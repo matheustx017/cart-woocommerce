@@ -8,7 +8,7 @@ coverage.xml
 .cursor/
 /.idea/
 /.vscode/
-# /vendor/  # Comentado para incluir no repo (necessário para Git Updater)
+/vendor/
 /node_modules/
 /code_analysis
 
