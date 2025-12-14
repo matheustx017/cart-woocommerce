@@ -20,7 +20,7 @@
     --mp-dark-success-color: #00a650;
     --mp-dark-warning-color: #f73;
     --mp-dark-error-color: #F23D4F;
-    --mp-dark-input-bg: #2d2d2d;
+    --mp-dark-input-bg: #00000000;
     --mp-dark-card-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
