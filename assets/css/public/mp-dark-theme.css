@@ -1,0 +1,500 @@
+/**
+ * Mercado Pago Dark Theme Styles
+ * 
+ * This file provides dark theme support for the Mercado Pago WooCommerce plugin.
+ * It overrides the default light theme styles to work with dark background websites.
+ */
+
+/* ===== CSS Variables for Dark Theme ===== */
+:root {
+    --mp-dark-bg-primary: #1a1a1a;
+    --mp-dark-bg-secondary: #2d2d2d;
+    --mp-dark-bg-tertiary: #3a3a3a;
+    --mp-dark-text-primary: #ffffff;
+    --mp-dark-text-secondary: rgba(255, 255, 255, 0.75);
+    --mp-dark-text-muted: rgba(255, 255, 255, 0.55);
+    --mp-dark-border-color: rgba(255, 255, 255, 0.2);
+    --mp-dark-border-light: rgba(255, 255, 255, 0.1);
+    --mp-dark-accent-color: #3483FA;
+    --mp-dark-accent-hover: #5a9bfc;
+    --mp-dark-success-color: #00a650;
+    --mp-dark-warning-color: #f73;
+    --mp-dark-error-color: #F23D4F;
+    --mp-dark-input-bg: #2d2d2d;
+    --mp-dark-card-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Common/Reset Styles ===== */
+.mp-checkout-container,
+.mp-checkout-container div,
+.mp-checkout-container span,
+.mp-checkout-container p,
+.mp-checkout-container a,
+.mp-checkout-container label,
+.mp-checkout-container input,
+.mp-checkout-container select,
+.mp-checkout-container button,
+.mp-checkout-container h1,
+.mp-checkout-container h2,
+.mp-checkout-container h3,
+.mp-checkout-container h4,
+.mp-checkout-container h5,
+.mp-checkout-container h6,
+.mp-checkout-container li,
+.mp-checkout-container ul,
+.mp-checkout-container ol {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-document-select,
+.mp-input-document {
+    background: var(--mp-dark-input-bg) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-vertical-line {
+    border-left-color: var(--mp-dark-border-color) !important;
+}
+
+/* ===== Input Fields ===== */
+.mp-checkout-andes-input,
+.mp-checkout-andes-input-error {
+    background: var(--mp-dark-input-bg) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-checkout-andes-input:focus {
+    border-color: var(--mp-dark-accent-color) !important;
+}
+
+.mp-checkout-andes-input::placeholder {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+/* ===== PIX Checkout Container ===== */
+.mp-checkout-pix-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    border-radius: 8px !important;
+}
+
+/* ===== PIX Template ===== */
+.mp-pix-template-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    border-radius: 8px !important;
+}
+
+.mp-pix-template-title,
+.mp-pix-template-subtitle {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== PIX Order Received / Thank You Page ===== */
+.mp-details-pix {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    box-shadow: var(--mp-dark-card-shadow) !important;
+}
+
+.mp-details-title {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-details-pix-title,
+.mp-details-list-description,
+.mp-details-pix-description,
+.mp-details-pix-qr-title,
+.mp-details-pix-qr-description,
+.mp-details-pix-amount {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-details-pix-qr-subtitle {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+.mp-details-pix-number-p {
+    border-color: var(--mp-dark-accent-color) !important;
+    color: var(--mp-dark-accent-color) !important;
+    background: transparent !important;
+}
+
+.mp-pix-right {
+    border-left-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-qr-input {
+    background-color: var(--mp-dark-input-bg) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-details-pix-button {
+    background-color: var(--mp-dark-accent-color) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.mp-details-pix-button:hover {
+    background-color: var(--mp-dark-accent-hover) !important;
+}
+
+/* Make QR code visible on dark background */
+.mp-details-pix-qr-img {
+    background-color: #ffffff !important;
+    padding: 10px !important;
+    border-radius: 8px !important;
+}
+
+/* ===== PIX Approved Page ===== */
+.mp-pix-approved-container,
+.mp-pix-image-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Credits Checkout ===== */
+.mp-checkout-credits-container,
+.mp-checkout-credits-content {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    border-radius: 8px !important;
+}
+
+.mp-checkout-benefits-list-title,
+.mp-checkout-benefits-title {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-checkout-benefits-list-item span,
+.mp-checkout-benefits-item span,
+.mp-checkout-benefits-item b {
+    color: var(--mp-dark-text-secondary) !important;
+}
+
+.mp-checkout-benefits-item-title {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-checkout-benefits-item-subtitle {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+/* ===== Checkout Redirect V3 ===== */
+.mp-checkout-redirect-v3-container {
+    background-color: var(--mp-dark-bg-tertiary) !important;
+}
+
+.mp-checkout-redirect-v3-container p,
+.mp-checkout-redirect-v3-title,
+.mp-checkout-redirect-v3-description {
+    color: var(--mp-dark-text-secondary) !important;
+}
+
+/* ===== Custom Checkout (Credit Card) ===== */
+.mp-checkout-custom-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    border-radius: 8px !important;
+}
+
+.mp-checkout-custom-info-text {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+.mp-checkout-custom-card-form .mp-checkout-custom-card-input,
+.mp-checkout-custom-security-code-input {
+    background: var(--mp-dark-input-bg) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-checkout-custom-card-input-iframe {
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+/* Wallet Button */
+.mp-wallet-button-container {
+    border-color: var(--mp-dark-border-color) !important;
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-wallet-button-container .mp-wallet-button-title span {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* Security Code Tooltip */
+.mp-checkout-custom-security-code-tooltip {
+    background: var(--mp-dark-bg-tertiary) !important;
+    border-color: var(--mp-dark-accent-color) !important;
+    color: var(--mp-dark-accent-color) !important;
+}
+
+.mp-checkout-custom-security-code-tooltip:hover::after {
+    background: var(--mp-dark-bg-tertiary) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-checkout-custom-security-code-tooltip:hover::before {
+    border-top-color: var(--mp-dark-bg-tertiary) !important;
+}
+
+/* ===== 3DS Modal ===== */
+#mp-3ds-modal-content {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-loading-text-3ds,
+#mp-modal-3ds-title,
+.mp-text-subtitle,
+.mp-normal-text-3ds {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-card-body-3ds {
+    background: var(--mp-dark-bg-tertiary) !important;
+}
+
+/* ===== Test Mode Card ===== */
+.mp-test-mode-card {
+    background: var(--mp-dark-bg-tertiary) !important;
+}
+
+.mp-test-mode-title {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-test-mode-description {
+    color: var(--mp-dark-text-secondary) !important;
+}
+
+/* ===== Terms and Conditions ===== */
+.mp-terms-and-conditions-text {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+.mp-terms-and-conditions-link {
+    color: var(--mp-dark-accent-color) !important;
+}
+
+.mp-terms-and-conditions-link:hover {
+    color: var(--mp-dark-accent-hover) !important;
+}
+
+/* ===== Privacy Policy ===== */
+.mp-privacy-policy-footer {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+.mp-privacy-policy-footer a {
+    color: var(--mp-dark-accent-color) !important;
+}
+
+/* ===== Checkout Benefits ===== */
+.mp-checkout-benefits-item {
+    color: var(--mp-dark-text-secondary) !important;
+}
+
+.mp-checkout-benefits-count-list-div {
+    background: rgba(52, 131, 250, 0.2) !important;
+}
+
+.mp-checkout-benefits-tick-mark::before,
+.mp-checkout-benefits-tick-mark::after {
+    background-color: var(--mp-dark-accent-color) !important;
+}
+
+/* ===== Alert Messages ===== */
+.alert-message {
+    color: var(--mp-dark-error-color) !important;
+}
+
+/* ===== Card Info Component ===== */
+.mp-card-info {
+    background: var(--mp-dark-bg-tertiary) !important;
+}
+
+/* ===== Input Labels ===== */
+.mp-input-label,
+.mp-checkout-container label {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Input Helpers ===== */
+.mp-input-helper {
+    color: var(--mp-dark-text-muted) !important;
+}
+
+.mp-input-helper-error {
+    color: var(--mp-dark-error-color) !important;
+}
+
+/* ===== Dropdown/Select Styles ===== */
+.mp-andes-dropdown,
+.mp-input-select {
+    background: var(--mp-dark-input-bg) !important;
+    color: var(--mp-dark-text-primary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-andes-dropdown option {
+    background: var(--mp-dark-bg-secondary) !important;
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Payment Method Logos ===== */
+.mp-payment-method-logo-slider,
+.mp-payment-methods-container {
+    background: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Radio Buttons ===== */
+.mp-input-radio-container label {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Ticket Checkout ===== */
+.mp-checkout-ticket-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== PSE Checkout ===== */
+.mp-checkout-pse-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Yape Checkout ===== */
+.mp-checkout-yape-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Basic (Pro) Checkout ===== */
+.mp-checkout-basic-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+/* ===== Checkout Redirect ===== */
+.mp-checkout-redirect-container,
+.mp-checkout-redirect-v2-container {
+    background-color: var(--mp-dark-bg-tertiary) !important;
+}
+
+.mp-checkout-redirect-container p,
+.mp-checkout-redirect-v2-container p {
+    color: var(--mp-dark-text-secondary) !important;
+}
+
+/* ===== Alert Details ===== */
+.mp-alert-details-container {
+    background: var(--mp-dark-bg-tertiary) !important;
+    border-color: var(--mp-dark-border-color) !important;
+}
+
+.mp-alert-details-container p {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Spinner ===== */
+.spinner-card-form,
+.mp-spinner-3ds {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    border-top-color: var(--mp-dark-accent-color) !important;
+}
+
+/* ===== Mobile Responsive Adjustments ===== */
+@media (max-width: 767.98px) {
+    .mp-pix-right {
+        border-top-color: var(--mp-dark-border-color) !important;
+        border-left: none !important;
+    }
+    
+    .mp-details-pix-button {
+        background-color: var(--mp-dark-accent-color) !important;
+    }
+}
+
+/* ===== WooCommerce Integration ===== */
+.woocommerce-checkout .mp-checkout-container,
+.woocommerce-order-received .mp-details-pix,
+.woocommerce .mp-checkout-container {
+    background-color: var(--mp-dark-bg-secondary) !important;
+    border-radius: 8px !important;
+}
+
+/* ===== Row Image Select ===== */
+.row-image-select p {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Credits Modal ===== */
+.mp-credits-modal {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-credits-modal-title,
+.mp-credits-modal-subtitle,
+.mp-credits-modal-description {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Super Token Payment Methods ===== */
+.mp-super-token-payment-methods {
+    background-color: var(--mp-dark-bg-secondary) !important;
+}
+
+.mp-super-token-payment-methods p,
+.mp-super-token-payment-methods span,
+.mp-super-token-payment-methods label {
+    color: var(--mp-dark-text-primary) !important;
+}
+
+/* ===== Focus States ===== */
+.mp-checkout-container input:focus,
+.mp-checkout-container select:focus,
+.mp-checkout-container textarea:focus {
+    border-color: var(--mp-dark-accent-color) !important;
+    box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3) !important;
+    outline: none !important;
+}
+
+/* ===== Disabled States ===== */
+.mp-checkout-container input:disabled,
+.mp-checkout-container select:disabled,
+.mp-checkout-container button:disabled {
+    background-color: var(--mp-dark-bg-tertiary) !important;
+    color: var(--mp-dark-text-muted) !important;
+    cursor: not-allowed !important;
+}
+
+/* ===== Link Styles ===== */
+.mp-checkout-container a:not(.mp-details-pix-button) {
+    color: var(--mp-dark-accent-color) !important;
+}
+
+.mp-checkout-container a:hover:not(.mp-details-pix-button) {
+    color: var(--mp-dark-accent-hover) !important;
+}
+
+/* ===== Scrollbar Styles (for webkit browsers) ===== */
+.mp-checkout-container ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.mp-checkout-container ::-webkit-scrollbar-track {
+    background: var(--mp-dark-bg-tertiary);
+    border-radius: 4px;
+}
+
+.mp-checkout-container ::-webkit-scrollbar-thumb {
+    background: var(--mp-dark-border-color);
+    border-radius: 4px;
+}
+
+.mp-checkout-container ::-webkit-scrollbar-thumb:hover {
+    background: var(--mp-dark-text-muted);
+}
+
+/* ===== Selection Highlight ===== */
+.mp-checkout-container ::selection {
+    background-color: var(--mp-dark-accent-color);
+    color: #ffffff;
+}

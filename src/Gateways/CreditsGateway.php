@@ -319,6 +319,12 @@ class CreditsGateway extends AbstractGateway
                 $this->mercadopago->helpers->url->getCssAsset('products/credits-modal')
             );
 
+            // Register dark theme CSS for websites with dark backgrounds
+            $this->mercadopago->hooks->scripts->registerStoreStyle(
+                'mercadopago_dark_theme_css',
+                $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
+            );
+
             $this->mercadopago->hooks->scripts->registerStoreScript(
                 'mp-credits-modal-js',
                 $this->mercadopago->helpers->url->getJsAsset('products/credits-modal')

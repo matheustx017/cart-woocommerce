@@ -418,6 +418,12 @@ class PixGateway extends AbstractGateway
                 $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-image')
             );
 
+            // Register dark theme CSS for websites with dark backgrounds
+            $this->mercadopago->hooks->scripts->registerStoreStyle(
+                'mercadopago_dark_theme_css',
+                $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
+            );
+
             $this->mercadopago->hooks->template->getWoocommerceTemplate(
                 'public/order/pix-order-received-image.php',
                 [
@@ -435,6 +441,12 @@ class PixGateway extends AbstractGateway
         $this->mercadopago->hooks->scripts->registerStoreStyle(
             'mp_pix_appproved',
             $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-approved')
+        );
+
+        // Register dark theme CSS for websites with dark backgrounds
+        $this->mercadopago->hooks->scripts->registerStoreStyle(
+            'mercadopago_dark_theme_css',
+            $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );
     }
 
@@ -468,6 +480,12 @@ class PixGateway extends AbstractGateway
         $this->mercadopago->hooks->scripts->registerStoreStyle(
             'mp_pix_thankyou',
             $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-thankyou')
+        );
+
+        // Register dark theme CSS for websites with dark backgrounds
+        $this->mercadopago->hooks->scripts->registerStoreStyle(
+            'mercadopago_dark_theme_css',
+            $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );
 
         $this->registerPixPoolingScript($order);

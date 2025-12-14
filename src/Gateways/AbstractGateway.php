@@ -54,7 +54,7 @@ abstract class AbstractGateway extends WC_Payment_Gateway implements MercadoPago
 
     protected float $ratio;
 
-    protected array $countryConfigs;
+    protected array $countryConfigs = [];
 
     // TODO(PHP8.2): Change type hint from phpdoc to native
     /**
@@ -348,6 +348,12 @@ abstract class AbstractGateway extends WC_Payment_Gateway implements MercadoPago
         $this->mercadopago->hooks->scripts->registerCheckoutStyle(
             'mercadopago_vars_css',
             $this->mercadopago->helpers->url->getCssAsset('public/mp-vars')
+        );
+
+        // Register dark theme CSS for websites with dark backgrounds
+        $this->mercadopago->hooks->scripts->registerCheckoutStyle(
+            'mercadopago_dark_theme_css',
+            $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );
 
         $this->mercadopago->hooks->scripts->registerCheckoutScript(
