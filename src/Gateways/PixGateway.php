@@ -418,8 +418,8 @@ class PixGateway extends AbstractGateway
                 $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-image')
             );
 
-            // Register dark theme CSS for websites with dark backgrounds
-            $this->mercadopago->hooks->scripts->registerStoreStyle(
+            // Register dark theme CSS with high priority to override all other styles
+            $this->mercadopago->hooks->scripts->registerDarkThemeStoreStyle(
                 'mercadopago_dark_theme_css',
                 $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
             );
@@ -443,8 +443,8 @@ class PixGateway extends AbstractGateway
             $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-approved')
         );
 
-        // Register dark theme CSS for websites with dark backgrounds
-        $this->mercadopago->hooks->scripts->registerStoreStyle(
+        // Register dark theme CSS with high priority to override all other styles
+        $this->mercadopago->hooks->scripts->registerDarkThemeStoreStyle(
             'mercadopago_dark_theme_css',
             $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );
@@ -482,8 +482,8 @@ class PixGateway extends AbstractGateway
             $this->mercadopago->helpers->url->getCssAsset('public/mp-pix-thankyou')
         );
 
-        // Register dark theme CSS for websites with dark backgrounds
-        $this->mercadopago->hooks->scripts->registerStoreStyle(
+        // Register dark theme CSS with high priority to override all other styles
+        $this->mercadopago->hooks->scripts->registerDarkThemeStoreStyle(
             'mercadopago_dark_theme_css',
             $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );

@@ -350,12 +350,6 @@ abstract class AbstractGateway extends WC_Payment_Gateway implements MercadoPago
             $this->mercadopago->helpers->url->getCssAsset('public/mp-vars')
         );
 
-        // Register dark theme CSS for websites with dark backgrounds
-        $this->mercadopago->hooks->scripts->registerCheckoutStyle(
-            'mercadopago_dark_theme_css',
-            $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
-        );
-
         $this->mercadopago->hooks->scripts->registerCheckoutScript(
             'wc_mercadopago_checkout_error_dispatcher',
             $this->mercadopago->helpers->url->getJsAsset('checkouts/mp-checkout-error-dispatcher')
@@ -383,6 +377,12 @@ abstract class AbstractGateway extends WC_Payment_Gateway implements MercadoPago
         $this->mercadopago->hooks->scripts->registerCheckoutStyle(
             'wc_mercadopago_checkout_components',
             $this->mercadopago->helpers->url->getCssAsset('checkouts/mp-plugins-components')
+        );
+
+        // Register dark theme CSS with high priority to ensure it loads LAST and overrides all other styles
+        $this->mercadopago->hooks->scripts->registerDarkThemeStyle(
+            'mercadopago_dark_theme_css',
+            $this->mercadopago->helpers->url->getCssAsset('public/mp-dark-theme')
         );
 
         $this->mercadopago->hooks->scripts->registerCheckoutScript(

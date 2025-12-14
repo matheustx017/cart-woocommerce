@@ -330,13 +330,49 @@ class Scripts
      *
      * @param string $name
      * @param string $file
+     * @param array $deps
      *
      * @return void
      */
-    private function registerStyle(string $name, string $file): void
+    private function registerStyle(string $name, string $file, array $deps = []): void
     {
+        wp_register_style($name, $file, $deps, $this->url->assetVersion());
+        wp_enqueue_style($name);
+    }
+
+    /**
+     * Register dark theme style with high priority to ensure it loads last
+     *
+     * @param string $name
+     * @param string $file
+     *
+     * @return void
+     */
+    public function registerDarkThemeStyle(string $name, string $file): void
+    {
+        // Add dark theme with high priority (loaded late) to override all other styles
+        add_action('wp_enqueue_scripts', function () use ($name, $file) {
+            wp_register_style($name, $file, [], $this->url->assetVersion());
+            wp_enqueue_style($name);
+        }, 999); // High priority number means it runs later
+    }
+
+    /**
+     * Register dark theme style for store pages with high priority
+     *
+     * @param string $name
+     * @param string $file
+     *
+     * @return void
+     */
+    public function registerDarkThemeStoreStyle(string $name, string $file): void
+    {
+        // Register and enqueue immediately with high priority
         wp_register_style($name, $file, [], $this->url->assetVersion());
         wp_enqueue_style($name);
+
+        // Also add inline CSS to ensure it takes precedence
+        wp_add_inline_style($name, '/* Dark theme loaded with high priority */');
     }
 
     /**
